@@ -1,0 +1,27 @@
+baseURL = 'https://0xJeevs.github.io/'
+languageCode = 'en-us'
+title = '0xJeevs | Terminal Portfolio'
+theme = 'digio-theme'
+
+[params]
+    author = "0xJeevs"
+    portraitImage = "/avatar.png" 
+    introTitle = "Hello, world!"
+    introBody = "Cybersecurity student and developer. Focus fields: Blue Teaming, Linux infrastructure, automation tools, and malware analysis."
+    statusImage = "/status-icon.png"
+    statusText = "Currently grinding CTFs and building custom security tools..."
+
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "posts"
+    url = "/posts/"
+    weight = 2
+
+[[menu.main]]
+    name = "projects"
+    url = "/projects/"
+    weight = 3
