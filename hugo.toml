@@ -10,7 +10,7 @@ theme = 'digio-theme'
     author = "Jeeva"
     
     # 1. Main Text Box Greeting
-    introTitle = "dana:"                       # Keeps the cool pixel format label
+    introTitle = "Jeevs:"                       # Keeps the cool pixel format label
     introSubtitle = "wut up."                  # Subheading greeting
     
     # 2. Main Bio Blurb (Your Summary)
