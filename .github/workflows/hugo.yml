@@ -22,26 +22,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.140.0
+      HUGO_VERSION: 0.145.0
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Theme Dependencies & Compile Tailwind
-        run: |
-          if [ -f "themes/digio-theme/package.json" ]; then
-            cd themes/digio-theme
-            npm install
-            npm run build
-            cd ../..
-          fi
 
       - name: Setup Pages
         id: pages
