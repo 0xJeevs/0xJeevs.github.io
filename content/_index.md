@@ -1,6 +1,6 @@
 +++
 ---
-title: "home"
+portraitImage = "/portrait.png"
 
 # 1. Update Left Profile Box Info:
 introTitle: "Jeevs:"
@@ -18,4 +18,3 @@ watchingTitle: "watching"
 watchingText: "Automating Jenkins CI/CD pipeline failure analyzers & scripting Python utilities."
 ---
 +++
-
