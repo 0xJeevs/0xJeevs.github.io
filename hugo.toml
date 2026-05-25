@@ -1,27 +1,25 @@
 baseURL = 'https://0xJeevs.github.io/'
-languageCode = 'en-us'
-title = '0xJeevs | Terminal Portfolio'
+defaultContentLanguage = 'en'
+title = '˚₊‧꒰ა welcome to my digi-garden ໒꒱ ‧₊˚'
 theme = 'digio-theme'
 
+[languages.en]
+    locale = 'en-us'
+
 [params]
-    author = "0xJeevs"
-    portraitImage = "/avatar.png" 
-    introTitle = "Hello, world!"
-    introBody = "Cybersecurity student and developer. Focus fields: Blue Teaming, Linux infrastructure, automation tools, and malware analysis."
-    statusImage = "/status-icon.png"
-    statusText = "Currently grinding CTFs and building custom security tools..."
-
-[[menu.main]]
-    name = "home"
-    url = "/"
-    weight = 1
-
-[[menu.main]]
-    name = "posts"
-    url = "/posts/"
-    weight = 2
-
-[[menu.main]]
-    name = "projects"
-    url = "/projects/"
-    weight = 3
+    author = "Jeeva"
+    
+    # 1. Main Text Box Greeting
+    introTitle = "dana:"                       # Keeps the cool pixel format label
+    introSubtitle = "wut up."                  # Subheading greeting
+    
+    # 2. Main Bio Blurb (Your Summary)
+    introBody = "Cybersecurity student and developer passionate about Blue Teaming, Linux infrastructure automation, and malware analysis architectures."
+    
+    # 3. Status Component (Top Right Box)
+    statusTitle = "status"
+    statusText = "Currently grinding advanced CTF challenges, managing custom Arch Linux dotfiles, and tracking system vulnerabilities."
+    
+    # 4. Media Tracking (Bottom Right Box)
+    watchingTitle = "watching"
+    watchingText = "Analyzing Web App Flaws & Parsing Jenkins CI/CD logs"
