@@ -2,7 +2,7 @@ baseURL = 'https://0xJeevs.github.io/'
 defaultContentLanguage = 'en'
 title = '0xJeevs | Terminal Portfolio'
 #title = '˚₊‧꒰ა welcome to my digi-garden ໒꒱ ‧₊˚'
-#theme = 'digio-theme'
+theme = 'digio-theme'
 
 [languages.en]
     locale = 'en-us'
