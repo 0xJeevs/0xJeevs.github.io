@@ -1,5 +1,5 @@
 +++
----
+#---
 portraitImage = "/portrait.png"
 
 # 1. Update Left Profile Box Info:
@@ -16,5 +16,5 @@ statusText: "Analyzing web app vulnerabilities, managing Arch Linux dotfiles, an
 watchingImage = "/watching.png"
 watchingTitle: "watching"
 watchingText: "Automating Jenkins CI/CD pipeline failure analyzers & scripting Python utilities."
----
+#---
 +++
