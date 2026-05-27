@@ -9,17 +9,19 @@ theme = 'digio-theme'
 [params]
      author = "Jeevaranjan V"
      
-     # Main Profile Block (Must be all lowercase)
+     # Main Profile Frame Configs (Strict Lowercase Only)
      portraitimage = "/avatar.png"
      introtitle = "Jeevs:"
      introsubtitle = "B.E CSE (Cyber Security)"
-     introbody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions[cite: 4]."
+     introbody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions."
      
-     # Status Blocks
+     # Status Component Configs (Strict Lowercase Only)
      statustitle = "status"
-     statustext = "Analyzing OWASP Top 10 vulnerabilities [cite: 23], working on ethical hacking scenarios [cite: 30], and grinding CTFs[cite: 4]."
+     statustext = "Analyzing OWASP Top 10 vulnerabilities, working on ethical hacking scenarios, and grinding CTFs."
+     
+     # Watching Component Configs (Strict Lowercase Only)
      watchingtitle = "learning"
-     watchingtext = "Deepening skills in Burp Suite, Metasploit, Hydra, and Linux infrastructure[cite: 31]."
+     watchingtext = "Deepening skills in Burp Suite, Metasploit, Hydra, and Linux infrastructure."
 
 # Navigation Menu
 [[menu.main]]
@@ -32,13 +34,13 @@ theme = 'digio-theme'
      url = "/posts/"
      weight = 2
 
-# Lower Grid Dynamic Cards 
+# Lower Layout Grid Dynamic Link Cards
 [[params.external_links]]
     title = "Intrusion Detection System"
-    description = "Built a real-time intrusion detection system with automated alerting[cite: 18]."
+    description = "Built a real-time intrusion detection system with automated alerting."
     link = "/posts/ids/"
 
 [[params.external_links]]
     title = "Web Vulnerability Scanner"
-    description = "Developed a web vulnerability scanner using OWASP ZAP API[cite: 22]."
+    description = "Developed a web vulnerability scanner using OWASP ZAP API."
     link = "/posts/vulnerability-scanner/"
