@@ -1,26 +1,35 @@
 baseURL = 'https://0xJeevs.github.io/'
 defaultContentLanguage = 'en'
-title = '0xJeevs | Terminal Portfolio'
-#title = '˚₊‧꒰ა welcome to my digi-garden ໒꒱ ‧₊˚'
+title = 'Jeevaranjan V | Portfolio'
 theme = 'digio-theme'
 
 [languages.en]
     locale = 'en-us'
 
 [params]
-    author = "Jeeva"
+    author = "Jeevaranjan V"
     
-    # 1. Main Text Box Greeting
-    introTitle = "Jeevs:"                       # Keeps the cool pixel format label
-    introSubtitle = "wut up."                  # Subheading greeting
+    # 1. Main Profile Frame
+    portraitImage = "/avatar.png"
+    introTitle = "Jeevs:"
+    introSubtitle = "B.E CSE (Cyber Security)"
+    introBody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions. Skilled in identifying and analyzing system flaws."
     
-    # 2. Main Bio Blurb (Your Summary)
-    introBody = "Cybersecurity student and developer passionate about Blue Teaming, Linux infrastructure automation, and malware analysis architectures."
-    
-    # 3. Status Component (Top Right Box)
+    # 2. Status Frame (Top Right Box)
     statusTitle = "status"
-    statusText = "Currently grinding advanced CTF challenges, managing custom Arch Linux dotfiles, and tracking system vulnerabilities."
+    statusText = "Analyzing OWASP Top 10 vulnerabilities, working on ethical hacking scenarios, and grinding CTFs."
     
-    # 4. Media Tracking (Bottom Right Box)
-    watchingTitle = "watching"
-    watchingText = "Analyzing Web App Flaws & Parsing Jenkins CI/CD logs"
+    # 3. Learning/Watching Frame (Bottom Right Box)
+    watchingTitle = "learning"
+    watchingText = "Deepening skills in Burp Suite, Metasploit, Hydra, Linux infrastructure, and KQL."
+
+# Navigation Menu
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "projects"
+    url = "/projects/"
+    weight = 2
