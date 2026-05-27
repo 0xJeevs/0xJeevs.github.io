@@ -33,3 +33,13 @@ theme = 'digio-theme'
     name = "projects"
     url = "/posts/"
     weight = 2
+
+[[params.external_links]]
+    title = "Intrusion Detection System"
+    description = "Real-time anomaly detection engine with threat visualization dashboard."
+    link = "/posts/ids/"
+
+[[params.external_links]]
+    title = "Web Vulnerability Scanner"
+    description = "Automated OWASP Top 10 assessment tool built using the OWASP ZAP API with email alerts."
+    link = "/posts/vulnerability-scanner/"
