@@ -21,7 +21,7 @@ theme = 'digio-theme'
     
     # 3. Learning/Watching Frame (Bottom Right Box)
     watchingTitle = "learning"
-    watchingText = "Deepening skills in Burp Suite, Metasploit, Hydra, Linux infrastructure, and KQL."
+    watchingText = "Deepening skills in Burp Suite, Metasploit, Hydra, Linux infrastructure"
 
 # Navigation Menu
 [[menu.main]]
