@@ -1,5 +1,7 @@
 ---
 title: "home"
+layout: "index"
+draft: "false"
 portraitimage: "/Jeevs.png"
 introtitle: "Jeevs:"
 introsubtitle: "sys_admin"

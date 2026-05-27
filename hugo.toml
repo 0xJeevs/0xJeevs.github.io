@@ -4,42 +4,41 @@ title = 'Jeevaranjan V | Portfolio'
 theme = 'digio-theme'
 
 [languages.en]
-    locale = 'en-us'
+     locale = 'en-us'
 
 [params]
-    author = "Jeevaranjan V"
-    
-    # 1. Main Profile Frame
-    portraitImage = "/avatar.png"
-    introTitle = "Jeevs:"
-    introSubtitle = "B.E CSE (Cyber Security)"
-    introBody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions. Skilled in identifying and analyzing system flaws."
-    
-    # 2. Status Frame (Top Right Box)
-    statusTitle = "status"
-    statusText = "Analyzing OWASP Top 10 vulnerabilities, working on ethical hacking scenarios, and grinding CTFs."
-    
-    # 3. Learning/Watching Frame (Bottom Right Box)
-    watchingTitle = "learning"
-    watchingText = "Deepening skills in Burp Suite, Metasploit, Hydra, Linux infrastructure"
+     author = "Jeevaranjan V"
+     
+     # Main Profile Block (Must be all lowercase)
+     portraitimage = "/avatar.png"
+     introtitle = "Jeevs:"
+     introsubtitle = "B.E CSE (Cyber Security)"
+     introbody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions[cite: 4]."
+     
+     # Status Blocks
+     statustitle = "status"
+     statustext = "Analyzing OWASP Top 10 vulnerabilities [cite: 23], working on ethical hacking scenarios [cite: 30], and grinding CTFs[cite: 4]."
+     watchingtitle = "learning"
+     watchingtext = "Deepening skills in Burp Suite, Metasploit, Hydra, and Linux infrastructure[cite: 31]."
 
 # Navigation Menu
 [[menu.main]]
-    name = "home"
-    url = "/"
-    weight = 1
+     name = "home"
+     url = "/"
+     weight = 1
 
 [[menu.main]]
-    name = "projects"
-    url = "/posts/"
-    weight = 2
+     name = "projects"
+     url = "/posts/"
+     weight = 2
 
+# Lower Grid Dynamic Cards 
 [[params.external_links]]
     title = "Intrusion Detection System"
-    description = "Real-time anomaly detection engine with threat visualization dashboard."
+    description = "Built a real-time intrusion detection system with automated alerting[cite: 18]."
     link = "/posts/ids/"
 
 [[params.external_links]]
     title = "Web Vulnerability Scanner"
-    description = "Automated OWASP Top 10 assessment tool built using the OWASP ZAP API with email alerts."
+    description = "Developed a web vulnerability scanner using OWASP ZAP API[cite: 22]."
     link = "/posts/vulnerability-scanner/"
