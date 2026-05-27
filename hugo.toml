@@ -31,5 +31,5 @@ theme = 'digio-theme'
 
 [[menu.main]]
     name = "projects"
-    url = "/projects/"
+    url = "/posts/"
     weight = 2
