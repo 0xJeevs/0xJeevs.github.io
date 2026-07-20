@@ -78,8 +78,23 @@ Cybersecurity and DevOps student pursuing **B.E CSE (Cyber Security)** at **Sri 
 
 ---
 
+### 📊 GitHub Stats & Activity
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=0xJeevs&theme=dark&background=111111&border=333333&currStreakNum=F9A8D4&sideNums=F9A8D4&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=AAAAAA)](https://git.io/streak-stats)
+
+<br/>
+
+[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=0xJeevs&theme=react-dark&bg_color=111111&color=f9a8d4&line=f9a8d4&point=ffffff&area=true&hide_border=false)](https://github.com/0xJeevs)
+
+</div>
+
+---
+
 <div align="center">
 
 📫 **Connect with me:** [ranjan18jeeva@gmail.com](mailto:ranjan18jeeva@gmail.com) | [Portfolio Site](https://0xJeevs.github.io)
 
 </div>
+
