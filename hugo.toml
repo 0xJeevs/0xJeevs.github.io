@@ -6,6 +6,11 @@ theme = 'digio-theme'
 [languages.en]
      locale = 'en-us'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
      author = "Jeevaranjan V"
      
@@ -13,15 +18,15 @@ theme = 'digio-theme'
      portraitimage = "/avatar.png"
      introtitle = "Jeevs:"
      introsubtitle = "B.E CSE (Cyber Security)"
-     introbody = "Cybersecurity student with hands-on experience in web application security, vulnerability assessment, and Capture The Flag (CTF) competitions."
+     introbody = "Cybersecurity and DevOps student with a strong foundation in Linux, distributed systems, and automated infrastructure. Passionate about building secure, cloud-native pipelines and GitOps workflows."
      
      # Status Component Configs (Strict Lowercase Only)
      statustitle = "status"
-     statustext = "Analyzing OWASP Top 10 vulnerabilities, working on ethical hacking scenarios, and grinding CTFs."
+     statustext = "Building an End-to-End GitOps CI/CD & Observability Platform (Terraform, K8s, ArgoCD, Jenkins, Prometheus/Grafana) and grinding CTFs with Team Hydra."
      
      # Watching Component Configs (Strict Lowercase Only)
      watchingtitle = "learning"
-     watchingtext = "Deepening skills in Burp Suite, Metasploit, Hydra, and Linux infrastructure."
+     watchingtext = "Deepening expertise in Kubernetes, Helm, ArgoCD, Trivy container scanning, and DevSecOps / Platform Engineering."
 
 # Navigation Menu
 [[menu.main]]
@@ -34,13 +39,18 @@ theme = 'digio-theme'
      url = "/posts/"
      weight = 2
 
+[[menu.main]]
+     name = "resume"
+     url = "/resume.pdf"
+     weight = 3
+
 # Lower Layout Grid Dynamic Link Cards
 [[params.external_links]]
-    title = "Intrusion Detection System"
-    description = "Built a real-time intrusion detection system with automated alerting."
-    link = "/posts/ids/"
+    title = "End-to-End GitOps CI/CD & Observability Platform"
+    description = "Kubernetes infrastructure provisioned via Terraform & Helm, GitOps workflow with ArgoCD, and automated Jenkins CI/CD pipelines."
+    link = "/posts/gitops-observability/"
 
 [[params.external_links]]
-    title = "Web Vulnerability Scanner"
-    description = "Developed a web vulnerability scanner using OWASP ZAP API."
-    link = "/posts/vulnerability-scanner/"
+    title = "Jobe Cluster-Based Online Code Evaluation System"
+    description = "Distributed Jobe cluster (1 Master, 4 Workers) with sandboxed execution, load balancing, and automated job scheduling."
+    link = "/posts/jobe-cluster/"
