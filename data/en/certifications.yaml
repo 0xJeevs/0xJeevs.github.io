@@ -1,0 +1,9 @@
+certifications:
+  - title: "Cryptography and Network Security"
+    issuer: "NPTEL"
+    date: "Issued"
+    url: "/resume.pdf"
+  - title: "Linux Fundamentals"
+    issuer: "TCM Security"
+    date: "Issued"
+    url: "/resume.pdf"

@@ -1,56 +1,118 @@
-baseURL = 'https://0xJeevs.github.io/'
-defaultContentLanguage = 'en'
+baseURL = "https://0xJeevs.github.io/"
+languageCode = 'en-us'
 title = 'Jeevaranjan V | Portfolio'
-theme = 'digio-theme'
+theme = 'hugo-noir'
 
-[languages.en]
-     locale = 'en-us'
+relativeURLs = true
+canonifyURLs = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [params]
-     author = "Jeevaranjan V"
-     
-     # Main Profile Frame Configs (Strict Lowercase Only)
-     portraitimage = "/avatar.png"
-     introtitle = "Jeevs:"
-     introsubtitle = "B.E CSE (Cyber Security)"
-     introbody = "Cybersecurity and DevOps student with a strong foundation in Linux, distributed systems, and automated infrastructure. Passionate about building secure, cloud-native pipelines and GitOps workflows."
-     
-     # Status Component Configs (Strict Lowercase Only)
-     statustitle = "status"
-     statustext = "Building an End-to-End GitOps CI/CD & Observability Platform (Terraform, K8s, ArgoCD, Jenkins, Prometheus/Grafana) and grinding CTFs with Team Hydra."
-     
-     # Watching Component Configs (Strict Lowercase Only)
-     watchingtitle = "learning"
-     watchingtext = "Deepening expertise in Kubernetes, Helm, ArgoCD, Trivy container scanning, and DevSecOps / Platform Engineering."
+name = "Jeevaranjan V"
+location = "Coimbatore, India"
+description = "Cybersecurity and DevOps student with a strong foundation in Linux, distributed systems, and automated infrastructure. Passionate about building secure, cloud-native pipelines and GitOps workflows."
+profile_image = "/Jeevs.png"
+email = "ranjan18jeeva@gmail.com"
+github = "https://github.com/0xJeevs"
+github_username = "0xJeevs"
+linkedin = "https://www.linkedin.com/in/jeevaranjan"
+linkedin_username = "Jeevaranjan"
 
-# Navigation Menu
-[[menu.main]]
-     name = "home"
-     url = "/"
-     weight = 1
+[params.tech]
+  row1 = [
+    { icon = "devicon-kubernetes-plain color", name = "Kubernetes" },
+    { icon = "devicon-docker-plain color", name = "Docker" },
+    { icon = "devicon-helm-plain color", name = "Helm" },
+    { icon = "devicon-terraform-plain color", name = "Terraform" },
+    { icon = "devicon-argocd-plain color", name = "ArgoCD" },
+    { icon = "devicon-jenkins-plain color", name = "Jenkins" },
+    { icon = "devicon-prometheus-plain color", name = "Prometheus" },
+    { icon = "devicon-grafana-plain color", name = "Grafana" }
+  ]
+  row2 = [
+    { icon = "devicon-linux-plain color", name = "Linux" },
+    { icon = "devicon-python-plain color", name = "Python" },
+    { icon = "devicon-bash-plain color", name = "Bash" },
+    { icon = "devicon-gcc-plain color", name = "GCC/C++" },
+    { icon = "devicon-java-plain color", name = "Java" },
+    { icon = "devicon-html5-plain color", name = "HTML5" },
+    { icon = "devicon-css3-plain color", name = "CSS3" },
+    { icon = "devicon-git-plain color", name = "Git" }
+  ]
 
-[[menu.main]]
-     name = "projects"
-     url = "/posts/"
-     weight = 2
+[[params.honors]]
+institution = "Kalam 25 CTF Event"
+title = "First Prize (Team Hydra)"
+date = "2025"
 
-[[menu.main]]
-     name = "resume"
-     url = "/resume.pdf"
-     weight = 3
+[[params.honors]]
+institution = "L3m0nCTF National Level Event"
+title = "1st Runner Up (Team Hydra)"
+date = "2025"
 
-# Lower Layout Grid Dynamic Link Cards
-[[params.external_links]]
-    title = "End-to-End GitOps CI/CD & Observability Platform"
-    description = "Kubernetes infrastructure provisioned via Terraform & Helm, GitOps workflow with ArgoCD, and automated Jenkins CI/CD pipelines."
-    link = "/posts/gitops-observability/"
+[[params.certifications]]
+title = "Cryptography and Network Security"
+issuer = "NPTEL"
+date = "Issued"
+url = "/resume.pdf"
 
-[[params.external_links]]
-    title = "Jobe Cluster-Based Online Code Evaluation System"
-    description = "Distributed Jobe cluster (1 Master, 4 Workers) with sandboxed execution, load balancing, and automated job scheduling."
-    link = "/posts/jobe-cluster/"
+[[params.certifications]]
+title = "Linux Fundamentals"
+issuer = "TCM Security"
+date = "Issued"
+url = "/resume.pdf"
+
+[[params.experience]]
+company = "Shadow Fox"
+role = "Cybersecurity Intern"
+period = "May 2024 (Remote, Coimbatore)"
+description = "Analyzed network traffic and system logs to monitor for anomalies and potential security breaches."
+responsibilities = [
+    "Analyzed network traffic and system logs for behavioral anomalies.",
+    "Identified potential security risks and performed log analysis for breach tracking."
+]
+
+[[params.projects]]
+title = "End-to-End GitOps CI/CD & Observability Platform"
+description = "Provisioned Kubernetes infrastructure via Terraform & Helm, built automated Jenkins & Docker CI/CD pipelines, implemented GitOps with ArgoCD, and integrated Prometheus/Grafana monitoring."
+tech = "Terraform, Kubernetes, ArgoCD, Jenkins, Docker, Python, Helm, Prometheus, Grafana"
+image = "/Jeevs.png"
+link = "/posts/gitops-observability/"
+
+[[params.projects]]
+title = "Jobe Cluster-Based Online Code Evaluation System"
+description = "Deployed and managed a distributed Jobe cluster with 1 Master and 4 Worker nodes for scalable online code compilation, worker load balancing, and sandboxed execution."
+tech = "Linux, Jobe, Bash, Networking, Distributed Systems, GCC/G++, System Administration"
+image = "/Jeevs.png"
+link = "/posts/jobe-cluster/"
+
+[[params.projects]]
+title = "Intrusion Detection System"
+description = "Built a real-time intrusion detection system designed with automated alerting mechanics and granular infrastructure log monitoring."
+tech = "Python, Log Analysis, Security, Alerting"
+image = "/Jeevs.png"
+link = "/posts/ids/"
+
+[[params.projects]]
+title = "Web Vulnerability Scanner"
+description = "Developed an automated web application security scanning implementation using OWASP ZAP API engine."
+tech = "OWASP ZAP, Python, Vulnerability Assessment, Email Alerting"
+image = "/Jeevs.png"
+link = "/posts/vulnerability-scanner/"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume.pdf"
+    weight = 3

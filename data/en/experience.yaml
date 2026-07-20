@@ -1,0 +1,8 @@
+experience:
+  - company: "Shadow Fox"
+    role: "Cybersecurity Intern"
+    period: "May 2024 - Remote, Coimbatore, India"
+    description: "Analyzed network traffic and system logs to monitor for anomalies and potential security breaches."
+    responsibilities:
+      - "Analyzed network traffic and system logs for behavioral anomalies."
+      - "Identified potential security risks and performed log analysis for breach tracking."
