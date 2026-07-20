@@ -68,14 +68,6 @@ Cybersecurity and DevOps student pursuing **B.E CSE (Cyber Security)** at **Sri 
 - **Shadow Fox** — *Cybersecurity Intern* `(05/2024 | Remote)`
   - Monitored system logs and network traffic to isolate behavioral anomalies and prevent security breaches.
 
----
-
-### 🎓 Education & Certifications
-
-- 🎓 **B.E CSE (Cyber Security)** — Sri Shakthi Institute of Engineering and Technology (2023 – 2027) | **CGPA: 8.2**
-- 🏫 **HSC (84%)** — IVL Matric Higher Secondary School (2022 – 2023)
-- 📜 **Cryptography and Network Security** — *NPTEL*
-- 📜 **Linux Fundamentals** — *TCM Security*
 
 ---
 
