@@ -1,75 +1,92 @@
-<!-- Music Player Floating Widget -->
+<!-- Floating CD Format Audio Player -->
 <div id="music-player-widget" class="fixed bottom-5 right-5 z-50 font-sans transition-all duration-300">
-    <!-- Collapsed Toggle Disk Button (when minimized) -->
-    <button id="music-expand-btn" onclick="toggleMusicPlayer(true)" class="hidden flex items-center gap-2 bg-[#18181b]/90 text-pink-400 hover:text-pink-300 border border-pink-500/40 hover:border-pink-400 p-3 rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 group" title="Open Music Player">
-        <span class="relative flex h-3 w-3">
-          <span id="music-pulse-dot" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75 hidden"></span>
-          <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
-        </span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18V5l12-2v13"></path>
-            <circle cx="6" cy="18" r="3"></circle>
-            <circle cx="18" cy="16" r="3"></circle>
-        </svg>
+    
+    <!-- Collapsed Toggle CD Disc Button (when minimized) -->
+    <button id="music-expand-btn" onclick="toggleMusicPlayer(true)" class="hidden flex items-center gap-3 bg-[#18181b]/90 text-accent-light dark:text-accent-dark border border-border-primary-light dark:border-border-primary-dark p-2.5 rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 group" title="Open Music Player">
+        <!-- Mini CD Disc -->
+        <div id="mini-cd-disc" class="w-9 h-9 rounded-full bg-gradient-to-tr from-neutral-900 via-neutral-700 to-neutral-900 border border-neutral-600 shadow-md flex items-center justify-center relative spin-cd">
+            <div class="absolute inset-1 rounded-full border border-neutral-500/30"></div>
+            <div class="w-3 h-3 rounded-full bg-sky-500 border border-neutral-300 flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-neutral-900"></div>
+            </div>
+        </div>
+        <span class="text-xs font-semibold pr-2 text-text-primary-light dark:text-text-primary-dark">Music</span>
     </button>
 
-    <!-- Expanded Music Card -->
-    <div id="music-card" class="w-80 bg-[#18181b]/95 text-white border border-gray-700/80 rounded-2xl p-4 shadow-2xl backdrop-blur-md transition-all duration-300 relative">
-        <!-- Close/Minimize Header Button -->
+    <!-- Expanded Music Player Card -->
+    <div id="music-card" class="w-80 sm:w-96 bg-bg-secondary-light/95 dark:bg-bg-secondary-dark/95 text-text-primary-light dark:text-text-primary-dark border border-border-primary-light dark:border-border-primary-dark rounded-2xl p-4 shadow-2xl backdrop-blur-md transition-all duration-300 relative">
+        
+        <!-- Header Controls -->
         <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2">
-                <!-- Equalizer Animation -->
+                <!-- Live Equalizer Indicator -->
                 <div id="eq-bars" class="flex items-end gap-[3px] h-4">
-                    <span class="w-[3px] bg-pink-400 rounded-full h-2 eq-bar"></span>
-                    <span class="w-[3px] bg-pink-400 rounded-full h-4 eq-bar"></span>
-                    <span class="w-[3px] bg-pink-400 rounded-full h-3 eq-bar"></span>
+                    <span class="w-[3px] bg-sky-500 dark:bg-sky-400 rounded-full h-2 eq-bar"></span>
+                    <span class="w-[3px] bg-sky-500 dark:bg-sky-400 rounded-full h-4 eq-bar"></span>
+                    <span class="w-[3px] bg-sky-500 dark:bg-sky-400 rounded-full h-3 eq-bar"></span>
                 </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-pink-400">Audio Player</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-500 dark:text-sky-400">Audio Player</span>
             </div>
-            <button onclick="toggleMusicPlayer(false)" class="text-gray-400 hover:text-white transition-colors p-1" title="Minimize">
+            <button onclick="toggleMusicPlayer(false)" class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors p-1" title="Minimize">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 12H6"/></svg>
             </button>
         </div>
 
-        <!-- Track Info -->
-        <div class="mb-3">
-            <div id="track-name" class="font-semibold text-sm truncate text-gray-100">Lofi Cyber Stream</div>
-            <div id="track-artist" class="text-xs text-gray-400 truncate">Chill Beats & DevSecOps Synth</div>
+        <!-- Main Content: CD Disc & Track Details -->
+        <div class="flex items-center gap-4 mb-3">
+            <!-- 360 Rotating CD Disc Format -->
+            <div class="relative flex-shrink-0 cursor-pointer group" onclick="togglePlay()">
+                <div id="cd-disc" class="w-16 h-16 rounded-full bg-gradient-to-tr from-neutral-900 via-neutral-700 to-neutral-900 border-2 border-neutral-600 shadow-xl flex items-center justify-center relative spin-cd transition-transform duration-300 group-hover:scale-105">
+                    <!-- Shiny CD Grooves -->
+                    <div class="absolute inset-1 rounded-full border border-neutral-500/30"></div>
+                    <div class="absolute inset-3 rounded-full border border-neutral-500/30"></div>
+                    <div class="absolute inset-5 rounded-full border border-neutral-500/20"></div>
+                    <!-- CD Hub Center -->
+                    <div class="w-6 h-6 rounded-full bg-sky-500/90 border-2 border-neutral-200 flex items-center justify-center shadow-inner z-10">
+                        <div class="w-2 h-2 rounded-full bg-neutral-900"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track Info & Controls -->
+            <div class="flex-1 min-w-0">
+                <div id="track-name" class="font-bold text-sm truncate text-text-primary-light dark:text-text-primary-dark">Lofi Chill Radio</div>
+                <div id="track-artist" class="text-xs text-text-secondary-light dark:text-text-secondary-dark truncate mb-2">Chill Beats for Coding</div>
+                
+                <!-- Playlist Selector -->
+                <select id="playlist-select" onchange="changeTrack(this.value)" class="w-full bg-bg-tertiary-light dark:bg-bg-tertiary-dark text-xs text-text-primary-light dark:text-text-primary-dark border border-border-secondary-light dark:border-border-secondary-dark rounded-lg px-2 py-1 focus:outline-none focus:border-sky-500 truncate">
+                    <option value="0">🎵 Lofi Chill Radio</option>
+                    <option value="1">⚡ Synthwave Cyber</option>
+                    <option value="2">🌌 Ambient Night Chill</option>
+                </select>
+            </div>
         </div>
 
-        <!-- Scrub Progress Bar -->
+        <!-- Progress Scrub Bar -->
         <div class="mb-3">
-            <input id="audio-progress" type="range" min="0" max="100" value="0" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-pink-500">
-            <div class="flex justify-between text-[10px] text-gray-400 mt-1">
+            <input id="audio-progress" type="range" min="0" max="100" value="0" class="w-full h-1.5 bg-bg-tertiary-light dark:bg-bg-tertiary-dark rounded-lg appearance-none cursor-pointer accent-sky-500">
+            <div class="flex justify-between text-[10px] text-text-secondary-light dark:text-text-secondary-dark mt-1">
                 <span id="current-time">00:00</span>
                 <span id="duration-time">LIVE</span>
             </div>
         </div>
 
         <!-- Controls Row -->
-        <div class="flex items-center justify-between">
-            <!-- Playlist Select -->
-            <select id="playlist-select" onchange="changeTrack(this.value)" class="bg-[#27272a] text-xs text-gray-200 border border-gray-700 rounded-lg px-2 py-1 focus:outline-none focus:border-pink-500 max-w-[130px] truncate">
-                <option value="0">🎵 Lofi Chill Radio</option>
-                <option value="1">⚡ Synthwave Cyber</option>
-                <option value="2">🌌 Ambient Coding</option>
-            </select>
-
-            <!-- Main Play / Next Controls -->
+        <div class="flex items-center justify-between pt-1 border-t border-border-primary-light/50 dark:border-border-primary-dark/50">
             <div class="flex items-center gap-2">
-                <button id="play-btn" onclick="togglePlay()" class="bg-pink-500 hover:bg-pink-400 text-white p-2.5 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-md" title="Play/Pause">
-                    <!-- Play Icon -->
-                    <svg id="play-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    <!-- Pause Icon -->
+                <!-- Play / Pause Button -->
+                <button id="play-btn" onclick="togglePlay()" class="bg-sky-600 hover:bg-sky-500 text-white p-2.5 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-md flex items-center justify-center" title="Play/Pause">
+                    <svg id="play-icon" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     <svg id="pause-icon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
                 </button>
-                <button onclick="nextTrack()" class="text-gray-400 hover:text-white p-1.5 transition-colors" title="Next Track">
+                <!-- Next Track Button -->
+                <button onclick="nextTrack()" class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark p-1.5 transition-colors" title="Next Track">
                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
                 </button>
             </div>
 
-            <!-- Volume Button -->
-            <button id="mute-btn" onclick="toggleMute()" class="text-gray-400 hover:text-white p-1 transition-colors" title="Mute/Unmute">
+            <!-- Volume Mute Button -->
+            <button id="mute-btn" onclick="toggleMute()" class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark p-1 transition-colors" title="Mute/Unmute">
                 <svg id="vol-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07"/></svg>
             </button>
         </div>
@@ -79,13 +96,30 @@
 <audio id="audio-element" preload="none"></audio>
 
 <style>
+/* 360 Degree Rotating Animation for CD Disc */
+@keyframes spinCD {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin-cd {
+    animation: spinCD 6s linear infinite;
+    animation-play-state: paused;
+}
+
+.spin-cd.playing {
+    animation-play-state: running;
+}
+
 .eq-bar {
     animation: eqBounce 0.8s ease-in-out infinite alternate;
     animation-play-state: paused;
 }
+
 .playing .eq-bar {
     animation-play-state: running;
 }
+
 .eq-bar:nth-child(2) { animation-delay: 0.2s; }
 .eq-bar:nth-child(3) { animation-delay: 0.4s; }
 
@@ -93,21 +127,13 @@
     0% { height: 4px; }
     100% { height: 16px; }
 }
-
-@keyframes spinSlow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-    animation: spinSlow 8s linear infinite;
-}
 </style>
 
 <script>
 const tracks = [
     {
         name: "Lofi Chill Radio",
-        artist: "Lofi Beats for Coding",
+        artist: "Chill Beats for Coding",
         url: "https://stream.zeno.fm/f3wvbbqmdg8uv"
     },
     {
@@ -124,7 +150,6 @@ const tracks = [
 
 let currentTrackIndex = 0;
 const audio = document.getElementById('audio-element');
-const playBtn = document.getElementById('play-btn');
 const playIcon = document.getElementById('play-icon');
 const pauseIcon = document.getElementById('pause-icon');
 const trackName = document.getElementById('track-name');
@@ -133,7 +158,8 @@ const progressBar = document.getElementById('audio-progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationTimeEl = document.getElementById('duration-time');
 const eqBars = document.getElementById('eq-bars');
-const musicPulseDot = document.getElementById('music-pulse-dot');
+const cdDisc = document.getElementById('cd-disc');
+const miniCdDisc = document.getElementById('mini-cd-disc');
 
 function loadTrack(index) {
     currentTrackIndex = index;
@@ -144,23 +170,33 @@ function loadTrack(index) {
     document.getElementById('playlist-select').value = index;
 }
 
+function setPlayingState(isPlaying) {
+    if (isPlaying) {
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+        eqBars.classList.add('playing');
+        cdDisc.classList.add('playing');
+        miniCdDisc.classList.add('playing');
+    } else {
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        eqBars.classList.remove('playing');
+        cdDisc.classList.remove('playing');
+        miniCdDisc.classList.remove('playing');
+    }
+}
+
 function togglePlay() {
     if (!audio.src) {
         loadTrack(currentTrackIndex);
     }
     if (audio.paused) {
         audio.play().then(() => {
-            playIcon.classList.add('hidden');
-            pauseIcon.classList.remove('hidden');
-            eqBars.classList.add('playing');
-            musicPulseDot.classList.remove('hidden');
+            setPlayingState(true);
         }).catch(e => console.log('Audio play blocked:', e));
     } else {
         audio.pause();
-        playIcon.classList.remove('hidden');
-        pauseIcon.classList.add('hidden');
-        eqBars.classList.remove('playing');
-        musicPulseDot.classList.add('hidden');
+        setPlayingState(false);
     }
 }
 
@@ -168,20 +204,14 @@ function nextTrack() {
     currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
     loadTrack(currentTrackIndex);
     audio.play().then(() => {
-        playIcon.classList.add('hidden');
-        pauseIcon.classList.remove('hidden');
-        eqBars.classList.add('playing');
-        musicPulseDot.classList.remove('hidden');
+        setPlayingState(true);
     }).catch(e => console.log('Audio play blocked:', e));
 }
 
 function changeTrack(index) {
     loadTrack(parseInt(index));
     audio.play().then(() => {
-        playIcon.classList.add('hidden');
-        pauseIcon.classList.remove('hidden');
-        eqBars.classList.add('playing');
-        musicPulseDot.classList.remove('hidden');
+        setPlayingState(true);
     }).catch(e => console.log('Audio play blocked:', e));
 }
 
@@ -227,6 +257,5 @@ function formatTime(seconds) {
     return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// Initial track setup
 loadTrack(0);
 </script>
